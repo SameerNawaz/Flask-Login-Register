@@ -1,7 +1,7 @@
 FROM python:alpine3.17
 WORKDIR /app
-COPY . /app
+COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt 
-ENTRYPOINT ["python","app.py"]
-
+COPY . /app
+ENTRYPOINT ["python"]
 
